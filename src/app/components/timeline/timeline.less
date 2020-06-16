@@ -1,0 +1,98 @@
+
+@import ( reference ) '~@less-helpers-module/_mixins.less'; 
+@import ( reference ) '~@less-helpers-module/_variables.less'; 
+
+.voter {
+    cursor: pointer;
+    &__vote {
+        margin: 0 30px;
+    }
+}
+.cycle {
+    width: 100%;
+}
+
+.timeline {
+    position: relative;
+    &__work {
+        position: relative;
+        height: 10px;
+        background: @work-color;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    &__items {
+        position: relative;
+        display: flex;
+        height: 10px;
+        width: 100%;
+        background: #fff;
+        margin-top: 53px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    &__short-break {
+        height: 10px;
+        bottom: 0;
+        background: @education-color;
+    }
+
+    &__long-break {
+        position: relative;
+        background: @hobby-color;
+    }
+    &__scale {
+        position: relative;
+        width: 100%;
+        margin-bottom: 69px;
+    }
+    &__scale-item {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 24px;
+        left: -13px;
+        color: @nepal;
+        font: 12px "PTSans", sans-serif;
+        line-height: 1.28;
+        text-align: right;
+
+        &:before {
+            content: '';
+            position: absolute;
+            right: 7px;
+            bottom: 33px;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #00d4d9;
+        }
+    }
+
+    &__total {
+        position: absolute;
+        height: 30px;
+        width: 110px;
+        bottom: 9px;
+        right: -53px;
+        color: @nepal;
+        font: 12px "PTSans", sans-serif;
+        line-height: 1.28;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 18px;
+            left: 54px;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #00d4d9;
+        }
+    }
+
+}

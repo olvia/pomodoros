@@ -1,0 +1,151 @@
+
+@import ( reference ) '~@less-helpers-module/_mixins.less'; 
+@import ( reference ) '~@less-helpers-module/_variables.less'; 
+
+.modal {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 200;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+// modal for adding tasks
+.add-task {
+    .change-task();
+    &__icons {
+        text-align: right;
+        cursor: pointer;
+    }
+    &__icon {
+        margin-left: 14px;
+    }
+
+    &__head {
+        margin-top: 11px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    &__subhead {
+        font: 14px "Roboto", sans-serif;
+        text-transform: uppercase;
+        margin-top: 23px;
+    }
+
+    &__subhead:first-child {
+        margin-top: 23px;
+    }
+    &__deadline{
+        margin-bottom:8px;
+    }
+    .desc {
+        padding-bottom: 7px;
+        border-bottom: 1px solid #8da5b8;
+        color: #8da5b8;
+    }
+}
+
+
+// inputs
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]+label:before {
+    content: "\26AB";
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 18px;
+    margin: -5px 5px 0 0;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+
+input[type=radio]:checked+label:after {
+    position: absolute;
+    content: " ";
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 17px;
+    margin: -5px 5px 0 0;
+    height: 4px;
+    width: 4px;
+    z-index: 100;
+    left: 6.5px;
+    top: 10.8px;
+    box-shadow: 0 0 0pt 2pt #2a3f50;
+}
+
+.label {
+    position: relative;
+    margin-right: 8px;
+    // .colors-labels-generator();
+}
+
+  
+/*pomodoros*/
+.add-task_pomodoros input:checked ~ label, 
+.add-task_pomodoros label, 
+.add-task_pomodoros label:hover, 
+.add-task_pomodoros label:hover ~ label {
+    background-image: url("/images/fill tomato.svg");
+  }
+  
+  .add-task_pomodoros {
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    float: left;
+  }
+  
+  .add-task_pomodoros input {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  
+  .add-task_pomodoros input:checked ~ label {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .add-task_pomodoros label {
+    height: 20px;
+    width: 20px;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+    background-image: url("/images/empty-tomato.svg");
+  }
+  .add-task_pomodoros label:hover, .add-task_pomodoros label:hover ~ label {
+    height: 20px;
+    width: 20px;
+  }
+
+  .add-task_pomodoros input[type=radio]:checked + label:after{
+     display: none;
+  }
+
+
+  input[type=radio] + label:before:hover{
+    .colors-labels-generator();
+    background-color: red;
+}

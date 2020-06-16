@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="/styles.css" rel="stylesheet">
+    <title>Productivity app</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content">
+        <div class="logo"><img alt="" src="/images/logo.svg"></div>
+        <nav class="nav header-nav">
+            <ul class="header-nav__list">
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="task-list-add-task.html" data-title="Add task">
+                        <span id="icon-add" class="button__icon icon-add"></span>
+                    </a>
+                </li>
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="task-list.html" data-title="Go to tasks">
+                        <span class="button__icon icon-list"></span>
+                    </a>
+                </li>
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="reports.html" data-title="Go to reports">
+                        <span class="button__icon icon-statistics"></span>
+                    </a>
+                </li>
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="pomodoros-settings.html" data-title="Go to settings">
+                        <span class="button__icon icon-settings"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <div class="wrapper">
+        <main class="main">
+            <section class="reports">
+                <h2 class="head_middle">Report</h2>
+                <div class="tab tab_reports">
+                    <a class="tab__item" href="reports-day-pomodoros.html">
+                        Day
+                    </a>
+                    <a class="tab__item white" href="reports-week-pomodoros.html">
+                        Week
+                    </a>
+                    <a class="tab__item" href="reports-month-pomodoros.html">
+                        Month
+                    </a>
+                </div>
+
+                <div class="reports__chart">
+                    <div class="report__chart_pomodoros">
+                        <div class="reports__week-tasks">
+                            <div class="arrow arrow_left">
+                                <span class="icon-arrow-left"></span>
+                            </div>
+                            <img alt="chart" src="/images/week-report-pomodoros.png">
+                            <div class="arrow arrow_right">
+                                <span class="icon-arrow-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </section>
+    </main>
+    <footer class="footer reports__footer">
+        <div class="tab tab_reports">
+            <a class="tab__item white" href="reports-day-pomodoros.html">
+                Pomodoros
+            </a>
+            <a class="tab__item" href="reports.html">
+                Tasks
+            </a>
+        </div>
+    </footer>
+    <script src="/bundle.js"></script>
+</body>
+</body>
+
+</html>

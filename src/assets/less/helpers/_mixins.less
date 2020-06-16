@@ -1,0 +1,249 @@
+.opacity (@opacity: 0.5) {
+  -webkit-opacity: @opacity;
+  -moz-opacity: @opacity;
+  opacity: @opacity;
+}
+
+
+.tooltip {
+  &:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: -1%;
+    top: 44px;
+    z-index: 300;
+    min-width: 76px;
+    height: 30px;
+    opacity: 0.9;
+    border-radius: 2px;
+    background-color: #dbeaf5;
+    color: #3c5162;
+    font: 700 12px "Roboto", sans-serif;
+    line-height: 30px;
+    padding: 0 5px;
+    text-align: center;
+  }
+
+  &:hover::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -21px;
+    border: 8px solid transparent;
+    border-bottom: 6px solid #dbeaf5;
+    opacity: 0.9;
+  }
+}
+
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.change-task{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 630px;
+    background-color: #2a3f50;
+    color: #fff;
+    font: 16px "Roboto",sans-serif;
+    padding: 45px 42px;
+    text-align: left;
+}
+//color for circles
+.colors-generator(@iterator: 1) when (@iterator <=length(@colors-array)) {
+  @item: extract(@colors-array, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category} {
+    background: @color;
+  }
+
+  .colors-generator((@iterator + 1));
+}
+
+
+//colors-active-generator
+.colors-active-generator(@iterator: 1) when (@iterator <=length(@colors-active-array)) {
+  @item: extract(@colors-active-array, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category}:hover {
+    background: @color;
+  }
+
+  .colors-active-generator((@iterator + 1));
+}
+
+
+//colors for buttons
+.colors-btn-generator(@iterator: 1) when (@iterator <=length(@colors-btn-array)) {
+  @item: extract(@colors-btn-array, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category} {
+    background: @color;
+  }
+
+  .colors-btn-generator((@iterator + 1));
+}
+
+//colors for buttons hover and focus
+.colors-btn-hover-generator(@iterator: 1) when (@iterator <=length(@colors-btn-hover-array)) {
+  @item: extract(@colors-btn-hover-array, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category}:hover {
+    background: @color;
+  }
+
+  &_@{category}:focus {
+    background: @color;
+  }
+
+  .colors-btn-hover-generator((@iterator + 1));
+}
+
+//colors for buttons active
+.colors-btn-active-generator(@iterator: 1) when (@iterator <=length(@colors-btn-active-array)) {
+  @item: extract(@colors-btn-active-array, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category}:active {
+    background: @color;
+  }
+
+  .colors-btn-active-generator((@iterator + 1));
+}
+
+
+//colors for icons
+.colors-icons-generator(@iterator: 1) when (@iterator <=length(@colors-icons)) {
+  @item: extract(@colors-icons, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category} {
+    background: @color;
+  }
+
+  .colors-icons-generator((@iterator + 1));
+}
+
+//colors for task-list items
+.colors-items-generator(@iterator: 1) when (@iterator <=length(@colors-array)) {
+  @item: extract(@colors-array, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category} {
+    border-left-color: @color;
+  }
+
+  .colors-items-generator((@iterator + 1));
+}
+
+
+// color priority generator
+.colors-priority-generator(@iterator: 1) when (@iterator <=length(@color-priority)) {
+  @item: extract(@color-priority, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category} {
+    color: @color;
+  }
+
+  .colors-priority-generator((@iterator + 1));
+}
+
+// color radio buttons generator
+.colors-labels-generator(@iterator: 1) when (@iterator <=length(@color-for-labels)) {
+  @item: extract(@color-for-labels, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category}:hover::before {
+    background-color: @color;
+  }
+  
+  &_@{category}:active::before {
+    background-color: @color;
+  }
+
+
+  input[type=radio]:checked+&_@{category}::before {
+    background-color: @color;
+  }
+
+  // &_@{category}:after {
+  //   background-color: @color;
+  // }
+
+  .colors-labels-generator((@iterator + 1));
+}
+
+
+//color pomodoros generator
+.colors-pomodoros-generator(@iterator: 1) when (@iterator <=length(@color-priority)) {
+  @item: extract(@color-priority, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category} {
+    background: @color;
+  }
+
+  .colors-pomodoros-generator((@iterator + 1));
+}
+
+//colors-pomodoros-active-generator
+.colors-pomodoros-active-generator(@iterator: 1) when (@iterator <=length(@color-priority-active)) {
+  @item: extract(@color-priority-active, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category}:hover {
+    background: @color;
+  }
+
+  .colors-pomodoros-active-generator((@iterator + 1));
+}
+
+
+
+//color notofication generator
+.colors-notifications-generator(@iterator: 1) when (@iterator <=length(@color-notifications)) {
+  @item: extract(@color-notifications, @iterator);
+  @category: extract(@item, 1);
+  @color: extract(@item, 2);
+
+  &_@{category} {
+    background: @color;
+  }
+
+  .colors-notifications-generator((@iterator + 1));
+}
+
+
+#colors() {
+  @work-color: #ffb200;
+  @education-color: #59abe3;
+  @hobby-color: #b470d0;
+  @sport-color: #e16c65;
+  @other-color: #00d4d9;
+}
+
+.responsive(@maxWidth; @rules) {
+  @media only screen and (max-width: @maxWidth) {
+      @rules();
+  }
+}

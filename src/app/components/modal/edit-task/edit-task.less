@@ -1,0 +1,106 @@
+
+@import ( reference ) '~@less-helpers-module/_mixins.less'; 
+@import ( reference ) '~@less-helpers-module/_variables.less'; 
+
+.modal {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 200;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    // background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.edit-task {
+    .change-task();
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    &__icon {
+        margin-left: 14px;
+    }
+
+    &__head {
+        margin-top: 11px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    &__subhead {
+        font: 14px "Roboto", sans-serif;
+        text-transform: uppercase;
+        margin-top: 23px;
+    }
+
+    &__subhead:first-child {
+        margin-top: 23px;
+    }
+
+    .desc {
+        padding-bottom: 7px;
+        border-bottom: 1px solid #8da5b8;
+        color: #8da5b8;
+
+    }
+
+    &__link:nth-child(2) {
+        margin-left: auto;
+    }
+}
+
+/*pomodoros*/
+.edit-task_pomodoros input:checked ~ label, 
+.edit-task_pomodoros label, 
+.edit-task_pomodoros label:hover, 
+.edit-task_pomodoros label:hover ~ label {
+    background-image: url("/images/fill tomato.svg");
+  }
+  
+  .edit-task_pomodoros {
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    float: left;
+  }
+  
+  .edit-task_pomodoros input {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  
+  .edit-task_pomodoros input:checked ~ label {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .edit-task_pomodoros label {
+    height: 20px;
+    width: 20px;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+    background-image: url("/images/empty-tomato.svg");
+  }
+  .edit-task_pomodoros label:hover, .edit-task_pomodoros label:hover ~ label {
+    height: 20px;
+    width: 20px;
+  }
+
+  .edit-task_pomodoros input[type=radio]:checked + label:after{
+     display: none;
+  }

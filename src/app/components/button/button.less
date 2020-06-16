@@ -1,0 +1,31 @@
+
+@import ( reference ) '~@less-helpers-module/_mixins.less'; 
+@import ( reference ) '~@less-helpers-module/_variables.less'; 
+
+.button {
+    min-width: 137px;
+    height: 42px;
+    background-color: @mountain-meadow;
+    vertical-align: top;
+    outline: none;
+    border: none;
+    color: inherit;
+    padding: 0 20px;
+    margin: 0 20px;
+    background-color: transparent;
+    font: 700 18px "PT Sans", sans-serif;
+
+    .responsive(768px, {
+        width: 261px;
+        height: 73px;
+        margin: 0 10px;
+      });
+
+    &:hover {
+        cursor: pointer;
+    }
+    .colors-btn-generator();
+    .colors-btn-hover-generator();
+    .colors-btn-active-generator();
+
+}

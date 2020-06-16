@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Productivity app</title>
+</head>
+
+<body>
+    <header class="header">
+       <div class="header__content">
+            <div class="logo"><img src="/images/logo.svg" alt="logo"></div>
+            <nav class="nav header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="task-list-remove-task.html" data-title="Delete tasks">
+                            <span class="button__icon icon-trash"></span>
+                            <span class="trash-circle">2</span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="task-list.html" data-title="Go to tasks">
+                            <span class="button__icon icon-list"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="reports.html" data-title="Go to reports">
+                            <span class="button__icon icon-statistics"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="pomodoros-settings.html" data-title="Go to settings">
+                            <span class="button__icon icon-settings"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+       </div>
+    </header>
+    <div class="wrapper">
+        <main class="main">
+            <section class="task-list">
+                <h2 class="head_middle"><a href="task-list-add-task.html">Daily Task List +</a></h2>
+                <div class="task-list__tab-content">
+                    <div class="tab tab_task-list">
+                        <a class="tab__item " href="task-list.html">
+                            Select All
+                        </a>
+                        <a class="tab__item nepal" href="task-list-done.html">
+                            Deselect All
+                        </a>
+                    </div>
+                    <div class="tab tab_task-list">
+                        <a class="tab__item white" href="task-list.html">
+                            To Do
+                        </a>
+                        <a class="tab__item nepal" href="task-list-done.html">
+                            Done
+                        </a>
+                    </div>
+                </div>
+                <ul class="task-list__list task-list__list_todo remove-mode" id="todo">
+                    <li class="task-list__item task-list__item_hobby">
+
+                        <div class="task-list__trash task-list__trash_hobby">
+                            <a href="task-list-remove-task.html">
+                                <span class="icon-trash trash"></span>
+                                <span class="icon-close close"></span>
+                            </a>
+                        </div>
+                        <span class="task-list__content">
+                            <p class="task-list__title task-list__title_urgent">Lorem ipsum sit amet</p>
+                            <p class="task-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore</p>
+                        </span>
+                        <a class="task-list__link" data-title="Edit task" href="task-list-edit-task.html"><span
+                                class="icon-edit"></span></a></span>
+                        <span class="task-list__pomodoros task-list__pomodoros_urgent pomodoros">
+                            <p class="pomodoros__digit">3</p>
+                            <a class="task-list__image pomodoros__image" href="timer.html" data-title="Go to Timer">
+                                <span class="icon-tomato"></span>
+                                <span class="icon-timer"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="task-list__item task-list__item_sport">
+
+                        <div class="task-list__trash task-list__trash_sport">
+                            <a href="task-list-remove-task.html">
+                                <span class="icon-trash trash"></span>
+                                <span class="icon-close close"></span>
+                            </a>
+                        </div>
+                        <span class="task-list__content">
+                            <p class="task-list__title task-list__title_high">Lorem ipsum sit amet</p>
+                            <p class="task-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore</p>
+                        </span>
+                        <a class="task-list__link" data-title="Edit task" href="task-list-edit-task.html"><span
+                                class="icon-edit"></span></a></span>
+                        <span class="task-list__pomodoros task-list__pomodoros_high pomodoros">
+                            <p class="pomodoros__digit">3</p>
+                            <a class="task-list__image pomodoros__image" href="timer.html" data-title="Go to Timer">
+                                <span class="icon-tomato"></span>
+                                <span class="icon-timer"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="task-list__item task-list__item_work">
+
+                        <div class="task-list__trash task-list__trash_work">
+                            <a href="task-list-remove-task.html"><span class="icon-trash trash"></span>
+                                <span class="icon-close close"></span>
+                            </a>
+                        </div>
+                        <span class="task-list__content">
+                            <p class="task-list__title task-list__title_high">Lorem ipsum sit amet</p>
+                            <p class="task-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore</p>
+                        </span>
+                        <a class="task-list__link" data-title="Edit task" href="task-list-edit-task.html"><span
+                                class="icon-edit"></span></a></span>
+                        <span class="task-list__pomodoros task-list__pomodoros_high pomodoros">
+                            <p class="pomodoros__digit">3</p>
+                            <a class="task-list__image pomodoros__image" href="timer.html" data-title="Go to Timer">
+                                <span class="icon-tomato"></span>
+                                <span class="icon-timer"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="task-list__item task-list__item_education">
+
+                        <div class="task-list__trash task-list__trash_education">
+                            <a href="task-list-remove-task.html"><span class="icon-trash trash"></span>
+                                <span class="icon-close close"></span>
+                            </a>
+                        </div>
+                        <span class="task-list__content">
+                            <p class="task-list__title task-list__title_middle">Lorem ipsum sit amet</p>
+                            <p class="task-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore</p>
+                        </span>
+                        <a class="task-list__link" data-title="Edit task" href="task-list-edit-task.html"><span
+                                class="icon-edit"></span></a></span>
+                        <span class="task-list__pomodoros task-list__pomodoros_middle pomodoros">
+                            <p class="pomodoros__digit">3</p>
+                            <a class="task-list__image pomodoros__image" href="timer.html" data-title="Go to Timer">
+                                <span class="icon-tomato"></span>
+                                <span class="icon-timer"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="task-list__item task-list__item_other">
+
+                        <div class="task-list__trash task-list__trash_other">
+                            <a href="task-list-remove-task.html"><span class="icon-trash trash"></span>
+                                <span class="icon-close close"></span>
+                            </a>
+                        </div>
+                        <span class="task-list__content">
+                            <p class="task-list__title task-list__title_low">Lorem ipsum sit amet</p>
+                            <p class="task-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore</p>
+                        </span>
+                        <a class="task-list__link" data-title="Edit task" href="task-list-edit-task.html"><span
+                                class="icon-edit"></span></a></span>
+                        <span class="task-list__pomodoros task-list__pomodoros_low pomodoros">
+                            <p class="pomodoros__digit">3</p>
+                            <a class="task-list__image pomodoros__image" href="timer.html" data-title="Go to Timer">
+                                <span class="icon-tomato"></span>
+                                <span class="icon-timer"></span>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="footer task-list__footer">
+            <div class="global-list"><a class="global-list__link" data-title="Go to Global List"
+                    href="task-list-global-list.html">Global list &gt;</a></div>
+            <div class="notifications">
+                <!-- <div class="notifications__item notifications__item_success">
+                    <div class="notifications__pomodoros">
+                        <span class="icon-tomato-success"></span>
+                    </div>
+                    <p class="notifications__descriptions">
+                        Task was successfully created!
+                    </p>
+                    <span class="icon-close notifications__close"></span>
+                </div> -->
+                <!-- <div class="notifications__item notifications__item_info">
+                    <div class="notifications__pomodoros">
+                        <span class="icon-tomato-info"></span>
+                    </div>
+                    <p class="notifications__descriptions">
+                        This is just an info notification message!
+                    </p>
+                    <span class="icon-close notifications__close"></span>
+                </div>
+                <div class="notifications__item notifications__item_warning">
+                    <div class="notifications__pomodoros">
+                        <span class="icon-tomato-warning"></span>
+                    </div>
+                    <p class="notifications__descriptions">
+                        This is just a warning notification message!
+                    </p>
+                    <span class="icon-close notifications__close"></span>
+                </div>
+                <div class="notifications__item notifications__item_error">
+                    <div class="notifications__pomodoros">
+                        <span class="icon-tomato-error"></span>
+                    </div>
+                    <p class="notifications__descriptions">
+                        Ups! An error has occured! 
+                    </p>
+                    <span class="icon-close notifications__close"></span>
+                </div> -->
+
+            </div>
+        </footer>
+        <script src="/bundle.js"></script>
+</body>
+
+</html>

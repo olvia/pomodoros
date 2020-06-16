@@ -1,0 +1,80 @@
+<div class="reports__chart">
+    <div class="report__chart_tasks">
+        <div class="reports__day-tasks">
+            <a class="arrow arrow_left" data-title="Back to global list" href="#/task-list-global-list">
+                <span class="icon-arrow-left"></span>
+            </a>
+            {{!-- <img alt="chart" src="/images/day-report-tasks.png"> --}}
+            {{!-- <table class="reports__table" id="datatable">
+                            <thead>
+                                <tr>
+                                    <td>Date</td>	
+                                    <td>Urgent</td>	
+                                    <td>High</td>	
+                                    <td>Medium</td>	
+                                    <td>Low</td>	
+                                    <td>Failed</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{date}}</td>
+                                    	<td id="urgent-item">{{urgent}}</td>
+                                        <td id="high-item">{{high}}</td>
+                                        <td id="medium-item">{{medium}}</td>
+                                        <td id="Low-item">{{low}}</td>
+                                        <td id="Failed-item">{{failed}}</td>	
+                                </tr>
+                            </tbody>
+                        </table> --}}
+            <div class="highcharts">
+                {{!-- <figure class="highcharts-figure">
+                    <div id="container"></div>
+                    <p class="highcharts-description">
+                        Chart showing stacked columns with grouping, allowing specific series to
+                        be stacked on the same column. Stacking is often used to visualize
+                        data that accumulates to a sum.
+                    </p>
+                </figure> --}}
+                <figure class="highcharts-figure">
+                    <div id="container" style="background-color:transparent"></div>
+                    <p class="highcharts-description">
+                        
+                    </p>
+
+                    <table id="datatable">
+                        <thead>
+                            <tr>
+                                <th>Categories</th>
+                                <th>Urgent</th>
+                                <th>High</th>
+                                <th>Medium</th>
+                                <th>Low</th>
+                                <th>Failed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Pomodoros</th>
+                                <td>{{urgent}}</td>
+                                <td>{{high}}</td>
+                                <td>{{medium}}</td>
+                                <td>{{low}}</td>
+                                <td>{{failed}}</td>
+                                {{!-- <th>Pomodoros</th>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>1</td> --}}
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+            </div>
+            <div class="arrow arrow_right">
+                <span class="icon-arrow-right"></span>
+            </div>
+        </div>
+    </div>
+</div>

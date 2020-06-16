@@ -1,0 +1,146 @@
+@import ( reference ) '~@less-helpers-module/_mixins.less'; 
+@import ( reference ) '~@less-helpers-module/_variables.less'; 
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #7f7f7f;
+
+    &__list {
+        align-self: stretch;
+
+        &_done {
+            .task-list__title {
+                text-decoration: line-through;
+            }
+
+            .task-list__pomodoros {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        border-left: 11px solid @hobby-color;
+        margin-bottom: 9px;
+        height: 87px;
+
+        & {
+            .colors-items-generator();
+        }
+    }
+
+    &__day {
+        width: 104px;
+        font: 700 11px "Roboto", sans-serif;
+        text-transform: uppercase;
+        color: #a2a2a2;
+
+        &-digit {
+            font: 700 27px "PT Sans", sans-serif;
+        }
+    }
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        text-align: left;
+        font: @font-base-roboto;
+
+    }
+
+    &__title {
+        margin-bottom: 9px;
+        color: #e74c3c;
+        font: 700 19px "Roboto", sans-serif;
+
+        & {
+            .colors-priority-generator();
+        }
+
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &__link {
+        position: relative;
+        margin: 6px 30px 6px 300px;
+        color: #cacaca;
+        font-size: 19px;
+        .tooltip();
+    }
+
+
+    &__image {
+        position: relative;
+        .tooltip();
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover::after {
+            left: 75%;
+            top: 57px;
+        }
+
+        &:hover::before {
+            left: 44px;
+            bottom: 9px;
+        }
+    }
+
+    &__pomodoros {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        width: 87px;
+        height: 87px;
+        background-color: #f75c4c;
+        .colors-pomodoros-generator();
+        .colors-pomodoros-active-generator();
+    }
+
+    &__tab-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+.icon-timer,
+.icon-tomato {
+    line-height: 1.4;
+}
+
+.icon-timer {
+    display: none;
+}
+
+.task-list__pomodoros:hover {
+    .icon-tomato {
+        display: none;
+    }
+
+    .pomodoros__digit {
+        display: none;
+    }
+
+    .icon-timer {
+        display: flex;
+        z-index: 100;
+    }
+}

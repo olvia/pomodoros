@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Productivity app</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content">
+        <div class="logo"><img src="/images/logo.svg" alt="logo"></div>
+        <nav class="nav header-nav">
+            <ul class="header-nav__list">
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="task-list-add-task.html" data-title="Add task">
+                        <span id="icon-add" class="button__icon icon-add"></span>
+                    </a>
+                </li>
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="task-list.html" data-title="Go to tasks">
+                        <span class="button__icon icon-list"></span>
+                    </a>
+                </li>
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="reports.html" data-title="Go to reports">
+                        <span class="button__icon icon-statistics"></span>
+                    </a>
+                </li>
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="pomodoros-settings.html" data-title="Go to settings">
+                        <span class="button__icon icon-settings"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="wrapper_main main">
+            <section class="wrapper__section settings">
+                <h2 class="settings__head head_middle">Settings</h2>
+                <p class="settings__subhead subhead">Pomodoros settings</p>
+                <div class="settings__tab tab">
+                    <a class="tab__item" href="pomodoros-settings.html">
+                        Pomodoros
+                    </a>
+                    <a class="tab__item" href="categories-settings.html">
+                        Categories
+                    </a>
+                </div>
+                <div class="intervals">
+                    <div class="intervals__item">
+                        <div class="intervals__head">
+                            <div class="intervals__color intervals_work"></div>
+                            <p class="intervals__title">Work Time</p>
+                            <div id="voter_work-time" class="intervals__scale voter">
+                                <span class="voter__minus">—</span>
+                                <span id="voter__vote_work-time" class="voter__vote intervals__number">15</span>
+                                <span class="voter__plus">+</span>
+                            </div>
+                        </div>
+                        <div class="intervals__description">Please select a value between 15 and 25
+                            <span class="strong-white">minutes</span>
+                        </div>
+                    </div>
+                    <div class="intervals__item">
+                        <div class="intervals__head">
+                            <div class="intervals__color intervals_other"></div>
+                            <p class="intervals__title">Work Iteration</p>
+                            <div id="voter_work-iteration" class="intervals__scale voter">
+                                <span class="voter__minus">—</span>
+                                <span id="voter__vote_work-iteration" class="voter__vote intervals__number">2</span>
+                                <span class="voter__plus">+</span>
+                            </div>
+                        </div>
+                        <div class="intervals__description">Please select a value between 2 and 5
+                            <span class="strong-white">iterations</span>
+                        </div>
+                    </div>
+                    <div class="intervals__item">
+                        <div class="intervals__head">
+                            <div class="intervals__color intervals_education"></div>
+                            <p class="intervals__title">Short Break</p>
+                            <div id="voter_short-break" class="intervals__scale voter">
+                                <span class="voter__minus">—</span>
+                                <span id="voter__vote_short-break" class="voter__vote intervals__number">3</span>
+                                <span class="voter__plus">+</span>
+                            </div>
+                        </div>
+                        <div class="intervals__description">Please select a value between 3 and 5
+                            <span class="strong-white">minutes</span>
+                        </div>
+                    </div>
+                    <div class="intervals__item">
+                        <div class="intervals__head">
+                            <div class="intervals__color intervals_hobby"></div>
+                            <p class="intervals__title">Long Break</p>
+                            <div id="voter_long-break" class="intervals__scale voter">
+                                <span class="voter__minus">—</span>
+                                <span id="voter__vote_long-break" class="voter__vote intervals__number">15</span>
+                                <span class="voter__plus">+</span>
+                            </div>
+                        </div>
+                        <div class="intervals__description">Please select a value between 15 and 30
+                            <span class="strong-white">minutes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cycle">
+                    <h3 class="cycle__head head_small">Your cycle</h3>
+                    <div class="cycle__holder timeline">
+                        <div class="timeline__items">
+                            <div class="timeline__work"></div>
+                            <div class="timeline__short-break"></div>
+                            <div class="timeline__long-break"></div>
+                        </div>
+                        <div class="timeline__scale"></div>
+                    </div>
+                    <div class="cycle__buttons">
+                        <button class="button button_ok"
+                            onclick="window.location.href='task-list-first-entrance.html'">Go to Tasks</button>
+                        <button class="button button_save"
+                            onclick="window.location.href='task-list-first-entrance.html'">Save</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/bundle.js"></script>
+</body>
+
+</html>

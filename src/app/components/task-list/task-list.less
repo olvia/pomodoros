@@ -1,0 +1,28 @@
+@import ( reference ) '~@less-helpers-module/_mixins.less'; 
+@import ( reference ) '~@less-helpers-module/_variables.less'; 
+
+.global-list {
+    position: relative;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+
+    &__link {
+        font: 700 20px "PT Sans", sans-serif;
+        color: #8da5b8;
+        .tooltip();
+
+        &:hover::after {
+            width: 123px;
+            left: 80px;
+            top: 30px;
+        }
+
+        &:hover::before {
+            left: 85px;
+            bottom: -5px;
+        }
+    }
+
+}

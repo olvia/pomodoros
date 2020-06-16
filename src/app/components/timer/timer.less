@@ -1,0 +1,111 @@
+@import ( reference ) '~@less-helpers-module/_mixins.less'; 
+@import ( reference ) '~@less-helpers-module/_variables.less'; 
+
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__subhead {
+        font: 17px "Roboto", sans-serif;
+        color: #fff;
+    }
+
+    &__circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 61px;
+        margin-bottom: 75px;
+        width: 264px;
+        height: 264px;
+        border-radius: 50%;
+        background-color: #2a3f50;
+        border: 5px solid #ffa841;
+        box-shadow: 0 5px 83px 17px rgba(21, 43, 59, 0.25);
+        font: 26px "PT Sans", sans-serif;
+
+    }
+
+    &__image {
+        max-width: 390px;
+        max-height: 390px;
+    }
+
+    &__pomodoros {
+        display: flex;
+        margin-top: 36px;
+        align-items: center;
+    }
+
+    &__title {
+        font: 26px "PT Sans", sans-serif;
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        &_process,
+        &_break,
+        &_break-failed {
+            justify-content: center;
+        }
+
+        &_completed {
+            .arrow_right {
+                visibility: unset;
+            }
+        }
+    }
+
+    &__plus {
+        margin-left: 12px;
+        width: 15px;
+        height: 15px;
+        color: #8da5b8;
+
+    }
+
+    .arrow_left {
+        position: relative;
+        .tooltip();
+
+        &:after {
+            width: 120px;
+        }
+
+        &:hover {
+            &:before {
+                bottom: -3px;
+            }
+        }
+    }
+
+    .arrow_right {
+        position: relative;
+        .tooltip();
+
+        &:after {
+            width: 120px;
+        }
+
+        &:hover {
+            &:before {
+                bottom: -3px;
+            }
+        }
+    }
+
+}
+
+
+.pomodoros__item {
+    width: 25px;
+    height: 23px;
+    margin: 0 5px;
+}

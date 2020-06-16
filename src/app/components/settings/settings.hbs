@@ -1,0 +1,85 @@
+<main class="wrapper_main main">
+<section class="wrapper__section settings">
+    <h2 class="settings__head head_middle">Settings</h2>
+    <p class="settings__subhead subhead">Pomodoros settings</p>
+    <div class="settings__tab tab">
+        <a class="tab__item white" href="">
+            Pomodoros
+            </a>
+            <a class="tab__item" href="">
+                Categories
+            </a>
+        </div>
+        <div class="intervals">
+            <div class="intervals__item">
+                <div class="intervals__head">
+                    <div class="intervals__color intervals_work"></div>
+                    <p class="intervals__title">Work Time</p>
+                    <div id="voter_work-time" class="intervals__scale voter">
+                        <span class="voter__minus">—</span>
+                        <span id="voter__vote_work-time" class="voter__vote intervals__number">{{workTime}}</span>
+                        <span class="voter__plus">+</span>
+                    </div>
+                </div>
+                <div class="intervals__description">Please select a value between 15 and 25
+                    <span class="strong-white">minutes</span>
+                </div>
+            </div>
+            <div class="intervals__item">
+                <div class="intervals__head">
+                    <div class="intervals__color intervals_other"></div>
+                    <p class="intervals__title">Work Iteration</p>
+                    <div id="voter_work-iteration" class="intervals__scale voter">
+                        <span class="voter__minus">—</span>
+                        <span id="voter__vote_work-iteration" class="voter__vote intervals__number">{{workIteration}}</span>
+                        <span class="voter__plus">+</span>
+                    </div>
+                </div>
+                <div class="intervals__description">Please select a value between 2 and 5
+                    <span class="strong-white">iterations</span>
+                </div>
+            </div>
+            <div class="intervals__item">
+                <div class="intervals__head">
+                    <div class="intervals__color intervals_education"></div>
+                    <p class="intervals__title">Short Break</p>
+                    <div id="voter_short-break" class="intervals__scale voter">
+                        <span class="voter__minus">—</span>
+                        <span id="voter__vote_short-break" class="voter__vote intervals__number">{{shortBreak}}</span>
+                        <span class="voter__plus">+</span>
+                    </div>
+                </div>
+                <div class="intervals__description">Please select a value between 3 and 5
+                    <span class="strong-white">minutes</span>
+                </div>
+            </div>
+            <div class="intervals__item">
+                <div class="intervals__head">
+                    <div class="intervals__color intervals_hobby"></div>
+                    <p class="intervals__title">Long Break</p>
+                    <div id="voter_long-break" class="intervals__scale voter">
+                        <span class="voter__minus">—</span>
+                        <span id="voter__vote_long-break" class="voter__vote intervals__number">{{longBreak}}</span>
+                        <span class="voter__plus">+</span>
+                    </div>
+                </div>
+                <div class="intervals__description">Please select a value between 15 and 30
+                    <span class="strong-white">minutes</span>
+                </div>
+            </div>
+        </div>
+        <div class="cycle">
+            <h3 class="cycle__head head_small">Your cycle</h3>
+            <div class="cycle__holder timeline">
+                <div class="timeline__items">
+                    <div class="timeline__work"></div>
+                    <div class="timeline__short-break"></div>
+                    <div class="timeline__long-break"></div>
+                </div>
+            <div class="timeline__scale"></div>
+        </div>
+        <div class="cycle__buttons">
+        </div>
+    </div>
+</section>
+</main>

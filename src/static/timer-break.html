@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Productivity app</title>
+</head>
+
+<body>
+    <header class="header">
+       <div class="header__content">
+            <div class="logo"><img src="/images/logo.svg" alt=""></div>
+            <nav class="nav header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="task-list-add-task.html" data-title="Add task">
+                            <span id="icon-add" class="button__icon icon-add"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="task-list.html" data-title="Go to tasks">
+                            <span class="button__icon icon-list"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="reports.html" data-title="Go to reports">
+                            <span class="button__icon icon-statistics"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="pomodoros-settings.html" data-title="Go to settings">
+                            <span class="button__icon icon-settings"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+       </div>
+    </header>
+    <div class="wrapper">
+        <main class="main">
+            <section class="timer">
+                <h2 class="head_middle">1. Creating a New Design</h2>
+                <p class="subhead timer__subhead">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                <div class="timer__pomodoros pomodoros">
+                    <img class="pomodoros__item" src="/images/fill tomato.svg" alt="empty-tomato">
+                    <img class="pomodoros__item" src="/images/fill tomato.svg" alt="empty-tomato">
+                    <img class="pomodoros__item" src="/images/empty-tomato.svg" alt="empty-tomato">
+                    <a href="" class="timer__plus"><span class="icon-add"></span></a>
+                </div>
+                <div class="timer__content timer__content_break">
+                    <!-- <a class="arrow arrow_left" href="task-list-global-list.html" data-title="Go to Global List"><span class="icon-arrow-left"></span></a> -->
+                    <img class="timer__image" src="/images/timer-break.png" alt="timer-break">
+                    <a class="arrow arrow_right"><span class="icon-arrow-right"></span></a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer reports__footer">
+            <button class="button button_save" onclick="window.location.href='timer-process.html'">Start
+                pomodora</button>
+            <button class="button button_ok" onclick="window.location.href='timer-completed.html'">Finish task</button>
+        </footer>
+        <script src="/bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+
+@import ( reference ) '~@less-helpers-module/_mixins.less'; 
+@import ( reference ) '~@less-helpers-module/_variables.less'; 
+
+
+.header {
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  height: 98px;
+  width: 100%;
+  z-index: 200;
+  background: @background-color;
+
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  transition: height 0.3s;
+  
+  &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: @screen-width;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 92px;
+      
+     
+  }
+  &_sticky {
+      height: 136px;
+      box-shadow: 0 5px 8.3px 1.7px rgba(34, 56, 73, 0.3);
+      border-bottom: solid 1px #223849;
+  }
+
+  &-nav {
+      margin-top: 40px;
+      margin-bottom: 15px;
+
+      &__list {
+          display: flex;
+      }
+
+      &__item {
+          color: @nepal;
+          list-style-type: none;
+          margin-left: 35px;
+      }
+
+      &__link {
+          text-decoration: none;
+          color: @nepal;
+          position: relative;
+
+          &:hover {
+              color: @spray;
+              .tooltip();
+
+              &:hover::after {
+                  width: 105px;
+              }
+
+              &:hover::before {
+                  bottom: -25px;
+              }
+          }
+
+          &:active {
+              color: #fff;
+          }
+
+          &:focus {
+              color: @nepal;
+          }
+
+      }
+
+  }
+
+}
+
+.logo {
+    width: 242px;
+    height: 74px;
+    visibility: hidden;
+    margin-top:31px;
+}

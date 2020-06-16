@@ -1,0 +1,46 @@
+
+@import ( reference ) '~@less-helpers-module/_mixins.less'; 
+@import ( reference ) '~@less-helpers-module/_variables.less'; 
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 74px;
+        margin-bottom: 63px;
+        width: 23%;
+        .responsive(768px, {
+            width: 82%;
+            margin-bottom: 145px;
+          });
+    }
+    &__item {
+        display: flex;
+        margin-bottom: 34px;
+
+    }
+    &__link {
+        margin-left: 23px;
+        padding-bottom: 12px;
+        width:100%;
+        border-bottom: 0.2px solid #425869;
+        font: @font-base-roboto;
+        line-height: 0.96;
+        color: @nepal;
+    }
+}
+
+.circle {
+    width: 17px;
+    height: 15px;
+    border-radius: 50%;
+    .colors-generator();
+
+    &__buttons {
+        margin-top: 42px;
+    }
+}

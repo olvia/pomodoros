@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="/styles.css" rel="stylesheet">
+        <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script> -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <title>Productivity app</title>
+    </head>
+
+    <body id="root">
+        <div class="wrapper">
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    
+        
+<!-- 
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCcJXBb_lL4DboQeq9-oP6l-ju1yc-K2p0",
+                authDomain: "productivity-app-a4fde.firebaseapp.com",
+                databaseURL: "https://productivity-app-a4fde.firebaseio.com",
+                projectId: "productivity-app-a4fde",
+                storageBucket: "productivity-app-a4fde.appspot.com",
+                messagingSenderId: "382485553078",
+                appId: "1:382485553078:web:912e0f84751fabf2b32b17",
+                measurementId: "G-KXTBE0NLSY"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+
+            let database =  firebase.database();
+            //  console.log(database);
+             
+             function writeSettingsData(workTime, worIteration, shortBreak, longBreak) {
+                firebase.database().ref('settings/').set({
+                    workTime: workTime,
+                    worIteration: worIteration,
+                    shortBreak : shortBreak,
+                    longBreak: longBreak
+                });
+                }
+                writeSettingsData(25, 2, 3,15);
+
+
+                // var ref = firebase.database().ref("settings");
+                // ref.on("value", function(snapshot) {
+                // snapshot.forEach(function(childSnapshot) {
+                // var childData = childSnapshot.val();
+                // var workTime=childData.workTime;
+                // console.log(workTime);
+                // });
+                // });
+
+                var ref = firebase.database().ref("settings");
+                ref.on("value", function(snapshot) {  
+                    var childData = snapshot.val();
+                    console.log (childData.longBreak)});
+         
+              
+        </script> -->
+
+        <script src="/bundle.js"></script>
+    </body>
+
+</html>

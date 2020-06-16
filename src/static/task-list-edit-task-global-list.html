@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="/styles.css" rel="stylesheet">
+    <title>Productivity app</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content">
+            <div class="logo"><img alt="logo" src="/images/logo.svg"></div>
+            <nav class="nav header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="#" data-title="Delete tasks">
+                            <span class="button__icon icon-trash"></span>
+                            <span class="trash-circle">2</span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="task-list.html" data-title="Go to tasks">
+                            <span class="button__icon icon-list"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="reports.html" data-title="Go to reports">
+                            <span class="button__icon icon-statistics"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="pomodoros-settings.html" data-title="Go to settings">
+                            <span class="button__icon icon-settings"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="main">
+            <section class="task-list">
+                <h2>
+                    <a href="">Daily Task List +</a>
+                </h2>
+               <div class="modal">
+                    <div class="edit-task edit-mode">
+                        <span class="edit-task__icons">
+                            <a class="edit-task__link" href=""><span class="edit-task__icon icon-trash"></span></a>
+                            <a class="edit-task__link" href=""><span class="edit-task__icon icon-close"></span></a>
+                            <a class="edit-task__link" href=""><span class="edit-task__icon icon-check"></span></a>
+                        </span>
+                        <h2 class="edit-task__head">Edit task</h3>
+                            <h3 class="edit-task__title edit-task__subhead">Title</h3>
+                            <input class="edit-task__title-desc desc" placeholder="Creating a new design"></input>
+                            <h3 class="edit-task__decription edit-task__subhead">Description</h3>
+                            <input class="edit-task__description-desc desc" placeholder="Add description here"></input>
+                            <h3 class="edit-task__category edit-task__subhead">Category</h3>
+                            <div class="edit-task__radio desc">
+                                <input type="radio" id="work-radio" name="category" value="work" checked>
+                                <label class="label label_work" for="work-radio">Work</label>
+    
+                                <input type="radio" id="education-radio" name="category" value="education">
+                                <label class="label label_education" for="education-radio">Education</label>
+    
+                                <input type="radio" id="hobby-radio" name="category" value="hobby">
+                                <label class="label label_hobby" for="hobby-radio">Hobby</label>
+    
+                                <input type="radio" id="sport-radio" name="category" value="sport">
+                                <label class="label label_sport" for="sport-radio">Sport</label>
+    
+                                <input type="radio" id="other-radio" name="category" value="other">
+                                <label class="label label_other" for="other-radio">Other</label>
+    
+                            </div>
+                            <h3 class="add-tak__deadline edit-task__subhead">Deadline</h3>
+                            <input class="add-tak__deadline-desc desc" placeholder="May 23, 2016"></input>
+                            <h3 class="add-tak__estimation edit-task__subhead">ESTIMATION</h3>
+                            <div class="add-tak__estimation-desc desc">
+                                <div class="edit-task_pomodoros">
+                                    <img class="pomodoros__item" src="/images/fill tomato.svg" alt="fill tomato">
+                                    <img class="pomodoros__item" src="/images/fill tomato.svg" alt="fill tomato">
+                                    <img class="pomodoros__item" src="/images/fill tomato.svg" alt="fill tomato">
+                                    <img class="pomodoros__item" src="/images/empty-tomato.svg" alt="empty tomato">
+                                    <img class="pomodoros__item" src="/images/empty-tomato.svg" alt="empty tomato">
+                                </div>
+                            </div>
+                            <h3 class="add-tak__priority edit-task__subhead">Priority</h3>
+                            <div class="edit-task__radio desc">
+                                <input type="radio" id="urgent-radio" name="priority" value="urgent" checked>
+                                <label class="label label_urgent" for="urgent-radio">Urgent</label>
+    
+                                <input type="radio" id="high-radio" name="priority" value="high">
+                                <label class="label label_high" for="high-radio">High</label>
+    
+                                <input type="radio" id="middle-radio" name="priority" value="middle">
+                                <label class="label label_middle" for="middle-radio">Middle</label>
+    
+                                <input type="radio" id="low-radio" name="priority" value="low">
+                                <label class="label label_low" for="low-radio">Low</label>
+    
+                            </div>
+                    </div>
+               </div>
+                <div class="tab tab_task-list">
+                    <a class="tab__item white" href="task-list.html">
+                        To Do
+                    </a>
+                    <a class="tab__item nepal" href="task-list-done.html">
+                        Done
+                    </a>
+                </div>
+                <ul class="task-list__list task-list__list_todo remove-mode" id="todo">
+                    <li class="task-list__item task-list__item_hobby">
+                        <div class="task-list__trash task-list__trash_hobby">
+                            <span class="icon-trash trash"></span>
+                            <span class="icon-close close"></span>
+                        </div>
+                        <span class="task-list__content">
+                            <p class="task-list__title task-list__title_urgent">Lorem ipsum sit amet</p>
+                            <p class="task-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore</p>
+                        </span>
+                        <a class="task-list__link" data-title="Edit task" href="#"><span
+                                class="icon-edit"></span></a></span>
+                        <span class="task-list__pomodoros task-list__pomodoros_urgent pomodoros">
+                            <p class="pomodoros__digit">3</p>
+                            <a class="task-list__image pomodoros__image" href="timer.html" data-title="Go to Timer">
+                                <span class="icon-tomato"></span>
+                                <span class="icon-timer"></span>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+                <div class="task-list__tabs">
+                    <div class="global-list"><a class="global-list__link" data-title="Go to Global List" href="">Global
+                            list &gt;</a></div>
+                    <div class="tab tab_task-list tab_priority">
+                        <a class="tab__item white">
+                            All
+                        </a>
+                        <a class="tab__item">
+                            Urgent
+                        </a>
+                        <a class="tab__item">
+                            High
+                        </a>
+                        <a class="tab__item">
+                            Middle
+                        </a>
+                        <a class="tab__item">
+                            Low
+                        </a>
+                    </div>
+                </div>
+
+                <div class="task-list-categories task-list-categories_work">
+                    <div class="task-list-categories__item">
+                        <div class="task-list-categories__circle"></div>Work
+                    </div>
+                    <ul class="task-list__list task-list__list_todo" id="done">
+                        <li class="task-list__item task-list__item_hobby">
+                            <div class="task-list__trash task-list__trash_work">
+                                <span class="icon-trash trash"></span>
+                                <span class="icon-close close"></span>
+                            </div>
+                            <span class="task-list__content">
+                                <p class="task-list__title task-list__title_urgent">Lorem ipsum sit amet</p>
+                                <p class="task-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </span>
+                            <span class="task-list__links">
+                                <a class="task-list__link" data-title="Move task" href="#"><span
+                                        class="icon-arrows-up"></span></a>
+                                <a class="task-list__link" data-title="Edit task" href="#"><span
+                                        class="icon-edit"></span></a>
+                            </span>
+                            <span class="task-list__pomodoros task-list__pomodoros_urgent pomodoros">
+                                <p class="pomodoros__digit">3</p>
+                                <a class="task-list__image pomodoros__image" href="timer.html" data-title="Go to Timer">
+                                    <span class="icon-tomato"></span>
+                                    <span class="icon-timer"></span>
+                                </a>
+                            </span>
+                        </li>
+                        <li class="task-list__item task-list__item_sport">
+                            <div class="task-list__trash task-list__trash_work">
+                                <span class="icon-trash trash"></span>
+                                <span class="icon-close close"></span>
+                            </div>
+                            <span class="task-list__content">
+                                <p class="task-list__title task-list__title_high">Lorem ipsum sit amet</p>
+                                <p class="task-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </span>
+                            <span class="task-list__links">
+                                <a class="task-list__link" data-title="Move task" href="#"><span
+                                        class="icon-arrows-up"></span></a>
+                                <a class="task-list__link" data-title="Edit task" href="#"><span
+                                        class="icon-edit"></span></a>
+                            </span>
+                            <span class="task-list__pomodoros task-list__pomodoros_high pomodoros">
+                                <p class="pomodoros__digit">3</p>
+                                <a class="task-list__image pomodoros__image" href="timer.html" data-title="Go to Timer">
+                                    <span class="icon-tomato"></span>
+                                    <span class="icon-timer"></span>
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="task-list-categories task-list-categories_education">
+                    <div class="task-list-categories__item">
+                        <div class="task-list-categories__circle"></div>Education
+                    </div>
+                    <ul class="task-list__list task-list__list_todo" id="done">
+                        <li class="task-list__item task-list__item_hobby">
+                            <div class="task-list__trash task-list__trash_education">
+                                <span class="icon-trash trash"></span>
+                                <span class="icon-close close"></span>
+                            </div>
+                            <span class="task-list__content">
+                                <p class="task-list__title task-list__title_low">Lorem ipsum sit amet</p>
+                                <p class="task-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </span>
+                            <span class="task-list__links">
+                                <a class="task-list__link" data-title="Move task" href="#"><span
+                                        class="icon-arrows-up"></span></a>
+                                <a class="task-list__link" data-title="Edit task" href="#"><span
+                                        class="icon-edit"></span></a>
+                            </span>
+                            <span class="task-list__pomodoros task-list__pomodoros_low pomodoros">
+                                <p class="pomodoros__digit">3</p>
+                                <a class="task-list__image pomodoros__image" href="timer.html" data-title="Go to Timer">
+                                    <span class="icon-tomato"></span>
+                                    <span class="icon-timer"></span>
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </section>
+    </main>
+    <script src="/bundle.js"></script>
+</body>
+</body>
+
+</html>

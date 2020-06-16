@@ -1,0 +1,19 @@
+ <li class="task-list__item {{categoryId}}" id="task{{id}}">
+        <span class="task-list__day">{{stringDeadlineDate}}</span>
+        <span class="task-list__content">
+                <p class="task-list__title task-list__title_{{priority}}">{{title}}</p>
+                <p class="task-list__description">{{description}}</p>
+        </span>
+        <span class="task-list__links">
+                <a id="task{{id}}-edit" class="task-list__link" data-title="Edit task" href="">
+                        <span class="icon-edit"></span>
+                </a>
+        </span>
+        <span class="task-list__pomodoros task-list__pomodoros_{{priority}} pomodoros">
+                <p class="pomodoros__digit">{{estimation}}</p>
+                <a class="task-list__image pomodoros__image" href="#/timer" data-title="Go to Timer">
+                        <span class="icon-tomato"></span>
+                        <span class="icon-timer"></span>
+                </a>
+        </span>
+</li>

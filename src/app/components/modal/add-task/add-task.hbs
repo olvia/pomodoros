@@ -1,0 +1,73 @@
+<div class="modal">
+    <div class="add-task">
+        <span class="add-task__icons">
+            <a class="add-task__link" href=""><span class="add-task__icon icon-close"></span></a>
+            <a class="add-task__link" href=""><span class="add-task__icon icon-check"></span></a>
+        </span>
+
+        <h2 class="add-task__head">Add task</h3>
+        <h3 class="add-task__title add-task__subhead">Title</h3>
+        <input class="add-task__title-desc desc" placeholder="Add title here"></input>
+        <h3 class="add-task__decription add-task__subhead">Description</h3>
+        <input class="add-task__description-desc desc" placeholder="Add description here"></input>
+        <h3 class="add-task__category add-task__subhead">Category</h3>
+        
+        <div class="add-task__radio desc">
+            <input type="radio" id="work-radio" name="category" value="work" checked>
+            <label class="label label_work" for="work-radio">Work</label>
+    
+            <input type="radio" id="education-radio" name="category" value="education">
+            <label class="label label_education" for="education-radio">Education</label>
+    
+            <input type="radio" id="hobby-radio" name="category" value="hobby">
+            <label class="label label_hobby" for="hobby-radio">Hobby</label>
+    
+            <input type="radio" id="sport-radio" name="category" value="sport">
+            <label class="label label_sport" for="sport-radio">Sport</label>
+    
+            <input type="radio" id="other-radio" name="category" value="other">
+            <label class="label label_other" for="other-radio">Other</label>
+        </div>
+
+        <h3 class="add-task__deadline add-task__subhead">Deadline</h3>
+        {{!-- <input class="add-task__deadline-desc desc" placeholder="May 23, 2016"></input> --}}
+                            
+        <input class="add-task__deadline-desc desc" type="date" id="deadline" name="deadline" value="2020-02-20" min="2020-02-20" max="2040-02-20">
+        <h3 class="add-task__estimation add-task__subhead">ESTIMATION</h3>
+        
+        <div class="add-task__estimation-desc desc">
+            <div class="add-task_pomodoros">
+                <input id="5 pomodoros" type="radio" name="pomodoros" value="5"/>
+                <label title="5 pomodoros" for="5 pomodoros"></label>
+
+                <input id="4 pomodoros" type="radio" name="pomodoros" value="4"/>
+                <label title="4 pomodoros" for="4 pomodoros"></label>
+
+                <input id="3 pomodoros" type="radio" name="pomodoros" value="3"/>
+                <label title="3 pomodoros" for="3 pomodoros"></label>
+
+                <input id="2 pomodoros" type="radio" name="pomodoros" value="2"/>
+                <label title="2 pomodoros" for="2 pomodoros"></label>
+
+                <input id="1 pomodoros" type="radio" name="pomodoros" value="1"/>
+                <label title="1 pomodoros" for="1 pomodoros"></label>
+            </div>
+        </div>
+        
+        <h3 class="add-task__priority add-task__subhead">Priority</h3>
+        
+        <div class="add-task__radio desc">
+            <input type="radio" id="urgent-radio" name="priority" value="urgent" checked>
+            <label class="label label_urgent" for="urgent-radio">Urgent</label>
+    
+            <input type="radio" id="high-radio" name="priority" value="high">
+            <label class="label label_high" for="high-radio">High</label>
+    
+            <input type="radio" id="middle-radio" name="priority" value="middle">
+            <label class="label label_middle" for="middle-radio">Middle</label>
+    
+            <input type="radio" id="low-radio" name="priority" value="low">
+            <label class="label label_low" for="low-radio">Low</label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<main class="main">
+            <section class="timer">
+                <h2 class="head_middle">1. {{taskName}}</h2>
+                <p class="subhead timer__subhead">{{taskDesc}}</p>
+                <div class="timer__pomodoros pomodoros">
+                    {{!-- <img class="pomodoros__item" src="/images/empty-tomato.svg" alt="empty-tomato">
+                    <img class="pomodoros__item" src="/images/empty-tomato.svg" alt="empty-tomato">
+                    <img class="pomodoros__item" src="/images/empty-tomato.svg" alt="empty-tomato"> --}}
+
+                    <a href="" class="timer__plus"><span class="icon-add"></span></a>
+                </div>
+                <div class="timer__content">
+                    <a class="arrow arrow_left" href="#/task-list-global-list" data-title="Go to Global List"><span
+                            class="icon-arrow-left"></span></a>
+                    {{!-- <img class="timer__image" src="/images/timer-first.png" alt="timer-first"> --}}
+                    <div class="timer__image">
+                        <div class="timer__circle">
+                            Let's do it!
+                        </div>
+                    </div>
+                    <a class="arrow arrow_right"><span class="icon-arrow-right"></span></a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer timer__footer">
+            <button class="button button_save" id="start" onclick="window.location.href='#/timer-process'">Start</button>
+        </footer>

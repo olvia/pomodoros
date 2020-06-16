@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Productivity app</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content">
+            <div class="logo"><img src="/images/logo.svg" alt="logo"></div>
+            <nav class="nav header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="task-list-add-task.html" data-title="Add task">
+                            <span id="icon-add" class="button__icon icon-add"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="task-list.html" data-title="Go to tasks">
+                            <span class="button__icon icon-list"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="reports.html" data-title="Go to reports">
+                            <span class="button__icon icon-statistics"></span>
+                        </a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="pomodoros-settings.html" data-title="Go to settings">
+                            <span class="button__icon icon-settings"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="wrapper__main main">
+            <section class="wrapper__section categories">
+                <h2 class="categories__head head_middle">Settings</h2>
+                <p class="categories__subhead subhead">Сategories list overview</p>
+                <div class="categories__tab tab">
+                    <a class="tab__item" href="pomodoros-settings.html">
+                        Pomodoros
+                    </a>
+                    <a class="tab__item" href="categories-settings.html">
+                        Categories
+                    </a>
+                </div>
+                <ul class="categories__list">
+                    <li class="categories__item">
+                        <div class="circle circle_work"></div><a class="categories__link" href="#">Work</a>
+                    </li>
+                    <li class="categories__item">
+                        <div class="circle circle_education"></div><a class="categories__link" href="#">Education</a>
+                    </li>
+                    <li class="categories__item">
+                        <div class="circle circle_hobby"></div><a class="categories__link" href="#">Hobby</a>
+                    </li>
+                    <li class="categories__item">
+                        <div class="circle circle_sport"></div><a class="categories__link" href="#">Sport</a>
+                    </li>
+                    <li class="categories__item">
+                        <div class="circle circle_other"></div><a class="categories__link" href="#">Other</a>
+                    </li>
+                </ul>
+                <button class="button button_ok" onclick="window.location.href='task-list-first-entrance.html'">Go to
+                    Tasks</button>
+            </section>
+        </main>
+    </div>
+    <script src="/bundle.js"></script>
+</body>
+
+</html>
